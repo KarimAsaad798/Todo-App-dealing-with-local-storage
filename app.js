@@ -25,6 +25,8 @@ submit.onclick = function () {
 tasksDiv.addEventListener("click", (e) => {
   // Delete Button
   if (e.target.classList.contains("del")) {
+   // Alert before removing task 
+   let conf = confirm('Are you sure you want to delete this task?');
     // Remove Task From Local Storage
     deleteTaskWith(e.target.parentElement.getAttribute("data-id"));
     // Remove Element From Page
